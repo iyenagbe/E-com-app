@@ -11,6 +11,10 @@ import PlaceOrder from './Pages/PlaceOrder';
 import Orders from './Pages/Orders';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
+import LatestCollection from './Components/LatestCollection';
+import { ShopContext } from "./Context/ShopContext";
+
+
 
 
 
@@ -34,6 +38,8 @@ const App = () => {
       </Routes>
       
       <Hero />
+      <LatestCollection />
+      <ShopContext />
 
     </div>
   )
