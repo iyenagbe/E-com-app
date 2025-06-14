@@ -1,10 +1,10 @@
-import { createContext } from 'react';
-import {products} from '../assets/products';
-const ShopContext = createContext();
+import { createContext } from "react";
+import { products } from "../assets/assets";
 
-const ShopProvider = ({ props }) => {
+export const ShopContext = createContext();
 
-    const currency = '₦';
+const ShopContextProvider = (props) => {
+    const currency = "₦";
     const deliveryFee = 2000;
     const taxRate = 0.075; // 7.5%
 
@@ -12,7 +12,6 @@ const ShopProvider = ({ props }) => {
         products , currency, deliveryFee, taxRate,
 
     }
-
     return (
         <ShopContext.Provider value={value}>
             {props.children}

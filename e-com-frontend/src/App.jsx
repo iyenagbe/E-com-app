@@ -1,20 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
+import PlaceOrder from './Pages/PlaceOrder';
+import Orders from './Pages/Orders';
+import Navbar from './Components/Navbar';
 import Collection from './Pages/Collection';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
-import Login from './Pages/Login';
-import PlaceOrder from './Pages/PlaceOrder';
-import Orders from './Pages/Orders';
-import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
-import LatestCollection from './Components/LatestCollection';
-import { ShopContext } from "./Context/ShopContext";
-
-
+import Login from './Pages/Login';
 
 
 
@@ -38,8 +34,8 @@ const App = () => {
       </Routes>
       
       <Hero />
-      <LatestCollection />
-      <ShopContext />
+      
+
 
     </div>
   )
