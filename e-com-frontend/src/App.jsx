@@ -33,9 +33,6 @@ const App = () => {
         <Route path='/orders' element={<Orders />} /> 
       </Routes>
       
-      <Hero />
-      
-
 
     </div>
   )

@@ -9,7 +9,7 @@ import LatestCollection from '../Components/LatestCollection'
 const Home = () => {
   return (
     <div>
-     <Hero />
+      <Hero />
       <LatestCollection />
      
     </div>
