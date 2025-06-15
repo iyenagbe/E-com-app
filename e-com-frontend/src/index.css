@@ -22,5 +22,7 @@ a.active hr{
     color: white;
     width: 23%;
     border-radius: 15px;
+    height: 2.5rem;
+    text-align: center;
   }
 }
