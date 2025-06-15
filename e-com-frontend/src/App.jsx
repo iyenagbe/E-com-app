@@ -9,7 +9,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
-import Hero from './Components/Hero';
+// import Hero from './Components/Hero';
 import Login from './Pages/Login';
 
 

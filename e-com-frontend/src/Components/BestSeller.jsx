@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
-import { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react'
+// import { useContext, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import Title from './Title';
 import ProductItem from './ProductItem';
+
 
 
 const BestSeller = () => {
@@ -10,11 +11,29 @@ const BestSeller = () => {
     const {products} = useContext(ShopContext);
     const [bestSeller, setBestSeller] = useState([]);
 
+    // console.log("All products from context:", products);
 
-    useEffect(() => {
-        const bestProducts = products.filter((item) => item.bestSeller);
-        setBestSeller(bestProducts.slice(0, 10));
-    }, [])
+    // useEffect(() => {
+    //     const bestProduct = products.filter((item) => item.bestSeller);
+    //     // setBestSeller(bestProduct.slice(0,5));
+    // }, [])
+
+        // useEffect(() => {
+
+        // if (products.length > 0) {
+        // const bestProduct = products.filter((item) => item.bestSeller === true);
+        // setBestSeller(bestProduct.slice(0, 5));
+        // }
+        //  }, [products]);
+
+        useEffect(() => {
+
+        if (products.length > 0) {
+            setBestSeller(products.slice(0, 5));
+        }
+        }, [products]);
+
+
 
 
   return (
