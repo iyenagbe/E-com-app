@@ -17,6 +17,7 @@ import Footer from './Components/Footer';
 
 
 
+
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
@@ -33,7 +34,7 @@ const App = () => {
         <Route path='/place-order' element={<PlaceOrder />} />
         <Route path='/orders' element={<Orders />} /> 
       </Routes>
-      
+
       <Footer />
 
     </div>

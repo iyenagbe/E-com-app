@@ -1,8 +1,11 @@
 import React from 'react'
 
 const NewsLetterBox = () => {
-    // e.preventDefault();
-
+    
+const onSubmitHandler = (event) => {
+  event.preventDefault();
+ 
+}
 
   return (
     <div className='text-center '>
@@ -12,7 +15,7 @@ const NewsLetterBox = () => {
         Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. */}
       </p>
 
-        <form  className='w-full sm:w-1/2 display:block items-center gap-3 mx-auto my-6 border pl-3 pb-2 mt-3 bg-gray-400'>
+        <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 display:block items-center gap-3 mx-auto my-6 border pl-3 pb-2 mt-3 bg-gray-400'>
 
             <input className='w-full sm:flex-1 outline-none' type="Full Name" placeholder='Full Name' required maxLength={40} />
             <input className='w-full sm:flex-1 outline-none' type="email" placeholder='Enter email' required maxLength={30} />

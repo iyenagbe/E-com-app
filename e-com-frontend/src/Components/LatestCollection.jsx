@@ -23,7 +23,7 @@ const LatestCollection = () => {
         💥 Big Style, Bigger Savings! 💸
             Step into the sale's with fresh looks and unbeatable prices.
 
-            🛍️ Up to 50% OFF on our latest collection!
+            🛍️ Up to 10% OFF on our latest collection!
             🎁 Free shipping on orders over ₦500,000 within Lagos Nigeria
             🔥 Limited stock. Unlimited style.
 
