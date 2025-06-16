@@ -40,7 +40,7 @@ const OurPolicy = () => {
 
             We do not offer cash refunds unless the item is out of stock.
         </p>
-        <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt="" />
+        {/* <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt="" />
         <p className='font-semibold'> Rayjock Store allows 3 to 5 days on return policy</p>
 
         <p className='text-gray-400'>
@@ -53,7 +53,7 @@ const OurPolicy = () => {
         <p className='text-gray-400'>
             We provide 24/7 customer support via WhatsApp, Email, and our website.
             Our team is always ready to assist you with any questions or concerns.
-        </p>
+        </p> */}
       </div>
     </div>
   )

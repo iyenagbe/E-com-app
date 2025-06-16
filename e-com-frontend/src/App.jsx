@@ -11,6 +11,7 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 // import Hero from './Components/Hero';
 import Login from './Pages/Login';
+import Footer from './Components/Footer';
 
 
 
@@ -33,6 +34,7 @@ const App = () => {
         <Route path='/orders' element={<Orders />} /> 
       </Routes>
       
+      <Footer />
 
     </div>
   )
