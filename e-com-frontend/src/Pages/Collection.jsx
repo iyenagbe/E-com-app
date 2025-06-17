@@ -4,16 +4,61 @@ import { assets } from '../assets/assets';
 import Title from '../Components/Title';
 import ProductItem from '../Components/ProductItem';
 
-const Collection = () => {
+      const Collection = () => {
 
-  const {products} = useContext(ShopContext);
-  const [showFilter, setShowFilter] = useState(false);
-  const [FilterProducts, setFilterProducts] = useState([]);
+        const {products} = useContext(ShopContext);
+        const [showFilter, setShowFilter] = useState(false);
+        const [FilterProducts, setFilterProducts] = useState([]);
+        const [category, setCategory] = useState([]);
+        const [subCategory, setSubCategory] = useState([]);
 
-  useEffect(() => {
-    setFilterProducts(products);
+        const toggleCategory = (e) => {
+        if (category.includes(e.target.value)) {
+          setCategory(prev => prev.filter(item => item !== e.target.value));
 
-  }, []);
+        } else {
+          setCategory(prev => [...prev, e.target.value]);
+        }
+      }
+
+      const toggleSubCategory = (e) => {
+        if (subCategory.includes(e.target.value)) {
+          setSubCategory(prev => prev.filter(item => item !== e.target.value));
+
+        } else {
+          setSubCategory(prev => [...prev, e.target.value]);
+        }
+      }
+
+      const applyFilter = () =>{
+        let productsCopy = products.slice();
+
+        if(category.length > 0) {
+          productsCopy = productsCopy.filter(item => category.includes(item.category));
+        }
+
+        // If subCategory is empty, we don't filter by subCategory
+        if(subCategory.length > 0) {
+          productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory));
+        }
+        setFilterProducts(productsCopy);
+      }
+
+        useEffect(() => {
+          setFilterProducts(products);
+
+        }, []);
+
+        useEffect(() => {
+          applyFilter();
+
+        }, [category, subCategory]);
+
+        // useEffect(() => {
+        //   console.log(subCategory);
+          
+
+        // }, [subCategory])
 
   return (
    <div className='flex flex-col lg:flex-row gap-10 pt-10 border-t'>
@@ -32,7 +77,7 @@ const Collection = () => {
             className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`}
             alt=""
           />
-        </p>
+        </p> 
 
         {/* CATEGORIES and TYPES stacked vertically */}
         <div className={`${showFilter ? 'block' : 'hidden'} w-31 lg:block space-y-5`}>
@@ -41,21 +86,21 @@ const Collection = () => {
           <div className="border border-gray-300 w-31 p-4 w-full">
             <p className="mb-3 text-sm font-medium">CATEGORIES</p>
             <div className="flex flex-col gap-2 text-sm font-light text-gray-600">
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Men" /> Men</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Ladies" /> Ladies</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Kids" /> Kids</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Shoes" /> Shoes</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Bags" /> Bags</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Men" onChange={toggleCategory} /> Men</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Women"onChange={toggleCategory}  /> Women</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Kids" onChange={toggleCategory} /> Kids</label>
+              {/* <label className="flex gap-2"><input className="w-3" type="checkbox" value="Shoes" onChange={toggleCategory} /> Shoes</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Bags" onChange={toggleCategory} /> Bags</label> */}
             </div>
           </div>
 
-          {/* TYPES */}
+          {/* subCategory features */}
           <div className="border border-gray-300  p-4 w-full">
             <p className="mb-3 text-sm font-medium">TYPES</p>
             <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Topwears" /> Topwears</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Shotwears" /> Shotwears</label>
-              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Winterwears" /> Winterwears</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Topwear" onChange={toggleSubCategory}/> Topwear</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Bottomwear" onChange={toggleSubCategory} /> Bottomwear</label>
+              <label className="flex gap-2"><input className="w-3" type="checkbox" value="Winterwear" onChange={toggleSubCategory} /> Winterwear</label>
             </div>
           </div>
 
