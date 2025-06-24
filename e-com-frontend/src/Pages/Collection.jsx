@@ -55,7 +55,6 @@ import ProductItem from '../Components/ProductItem';
 
         useEffect(() => {
           applyFilter();
-
         }, [category, subCategory, search, showSearch]);
 
 
