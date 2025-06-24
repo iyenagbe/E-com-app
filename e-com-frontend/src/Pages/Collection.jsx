@@ -4,14 +4,16 @@ import { assets } from '../assets/assets';
 import Title from '../Components/Title';
 import ProductItem from '../Components/ProductItem';
 
+
       const Collection = () => {
 
-        const {products} = useContext(ShopContext);
+        const {products, search, showSearch} = useContext(ShopContext);
         const [showFilter, setShowFilter] = useState(false);
         const [FilterProducts, setFilterProducts] = useState([]);
         const [category, setCategory] = useState([]);
         const [subCategory, setSubCategory] = useState([]);
         const [sortType, setSortType] = useState('relavent');
+        
 
 
         
@@ -36,6 +38,10 @@ import ProductItem from '../Components/ProductItem';
       const applyFilter = () =>{
         let productsCopy = products.slice();
 
+        if(showSearch && search) {
+          productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+        }
+
         if(category.length > 0) {
           productsCopy = productsCopy.filter(item => category.includes(item.category));
         }
@@ -50,11 +56,11 @@ import ProductItem from '../Components/ProductItem';
         useEffect(() => {
           applyFilter();
 
-        }, [category, subCategory]);
+        }, [category, subCategory, search, showSearch]);
 
 
           const sortProduct = () => {
-          let fpCopy = filterProducts.slice();
+          let fpCopy = FilterProducts.slice();
 
           switch (sortType) {
             case 'low-high':
@@ -71,7 +77,7 @@ import ProductItem from '../Components/ProductItem';
 
         useEffect(() =>{
           sortProduct();
-        })
+        }, [sortType])
 
   return (
 
