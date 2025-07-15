@@ -11,29 +11,29 @@ const OurPolicy = () => {
         <p className='font-semibold'>Rayjock Store Exchange Policy</p>
 
         <p className='text-gray-400'> 
-            🔄 Exchange Window for
+            Exchange Window for
             Items can be exchanged within 3 to 5 days of delivery.
 
             The item must be returned in original condition — unused, unwashed, with tags and original packaging.
 
-            📦 Eligible Items
+            Eligible Items
             Exchanges are allowed for size issues, defects, or wrong items shipped.
 
             Non-exchangeable items: underwear, swimwear, clearance/sale items, or customized products.
 
-            🔁 How to Request an Exchange
+            How to Request an Exchange
             Contact our support team via WhatsApp, Email, or through your account dashboard.
 
             Once approved, ship the item back we’ll provide return instructions.
 
             We’ll send a replacement item or store credit after we receive and inspect the item.
 
-            🚚 Who Pays for Shipping?
+            Who Pays for Shipping?
             If the exchange is due to our error wrong item, damaged, etc., we cover shipping.
 
             If the customer ordered the wrong size or changed their mind, the customer covers return shipping.
 
-            ⚠️ Important Notes
+            Important Notes
             Items returned without approval will not be processed.
 
             Only one exchange per item is allowed.
