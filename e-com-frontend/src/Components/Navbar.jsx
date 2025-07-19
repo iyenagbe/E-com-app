@@ -60,28 +60,28 @@ const Navbar = () => {
                 <p className='absolute right-[-6px] bottom-[-6px] min-w-[16px] h-[16px] px-[4px] 
                 bg-black text-white rounded-full text-[10px] flex items-center justify-center leading-none'>
                 {getCartCount()}
-</p>
+                </p>
+                </Link>
 
-            </Link>
             <img onClick={() =>setVisible(true)} src={assets.menu_icon} className='w-4 cursor-pointer sm:hidden' alt="" />
         </div>
 
-      {/* sidebar menu for smaller screen  */}
-      <div className={`absolute top-0 right-0 botton-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
+        {/* sidebar menu for smaller screen  */}
+        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
         <div className='flex flex-col text-gray-600'>
-            
-            <div onClick={() => setVisible(false)} className='flex item-center gap-4 p-3 cursor-pointer'>
-                <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
-                <p>back</p>
+        
+        <div onClick={() => setVisible(false)} className='flex item-center gap-4 p-3 cursor-pointer'>
+            <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
+            <p>back</p>
 
-            </div>
-            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/'>HOME</NavLink>
-            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/collection'>COLLECTION</   NavLink>
-            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/about'>ABOUT</NavLink>
-            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/contact'>CONTACT</NavLink>
-            
         </div>
-      </div>
+        <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/'>HOME</NavLink>
+        <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/collection'>COLLECTION</NavLink>  
+        <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/about'>ABOUT</NavLink>
+        <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/contact'>CONTACT</NavLink>
+        
+    </div>
+    </div>
     </div>
   )
 }
