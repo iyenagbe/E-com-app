@@ -9,6 +9,7 @@ import NewsLetterBox from '../Components/NewsLetterBox'
 
 
 
+
 const Home = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const Home = () => {
       <BestSeller />
       <OurPolicy />
       <NewsLetterBox />
-     
+           
     </div>
   )
 }
