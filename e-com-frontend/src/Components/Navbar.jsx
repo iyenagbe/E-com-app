@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const [visible, setVisible] = React.useState(false);
 
-    const {setShowSearch} = useContext(ShopContext);
+    const {setShowSearch, getCartCount} = useContext(ShopContext);
 
 
   return (
@@ -57,8 +57,10 @@ const Navbar = () => {
 
             <Link to='/cart' className='relative'>
                 <img src={assets.cart_icon} className='w-5 min-w-5' alt="" />
-                <p className='absolute right-[-5px] botton-[-4px] w-4 text-center leading-4 
-                bg-blacktext-white aspect-square rounded-full text-[8px]'>5</p>
+                <p className='absolute right-[-6px] bottom-[-6px] min-w-[16px] h-[16px] px-[4px] 
+                bg-black text-white rounded-full text-[10px] flex items-center justify-center leading-none'>
+                {getCartCount()}
+</p>
 
             </Link>
             <img onClick={() =>setVisible(true)} src={assets.menu_icon} className='w-4 cursor-pointer sm:hidden' alt="" />
@@ -74,7 +76,7 @@ const Navbar = () => {
 
             </div>
             <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/'>HOME</NavLink>
-            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/collection'>COLLECTION</NavLink>
+            <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/collection'>COLLECTION</   NavLink>
             <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/about'>ABOUT</NavLink>
             <NavLink onClick={() =>setVisible(false)} className='py-2 pl-4 border-none' to='/contact'>CONTACT</NavLink>
             
