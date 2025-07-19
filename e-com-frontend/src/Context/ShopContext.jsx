@@ -6,8 +6,8 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
     const currency = "₦";
-    const deliveryFee = 2000;
-    const taxRate = 0.075; // 7.5%
+    const delivery_Fee = 2000;
+    const taxRate = 0.075; 
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false)
     const [cartItems, setCartItems] = useState({});
@@ -87,7 +87,7 @@ const ShopContextProvider = (props) => {
 
             // value obeject function 
     const value = {
-        products , currency, deliveryFee, taxRate,
+        products , currency, delivery_Fee, taxRate,
         search, setSearch, showSearch, setShowSearch,
         cartItems, addToCart,
 
