@@ -63,17 +63,36 @@ const ShopContextProvider = (props) => {
         setCartItems(cartData);
 
     }
+        // products caculation
+    const getCartAmount = () => {
+    let totalAmount = 0;
 
-        // useEffect(() =>{
-        //     console.log(cartItems);
-        // }, [cartItems])
+    for (const productId in cartItems) {
+        const itemInfo = products.find((product) => product._id === productId);
 
+        if (!itemInfo) continue; 
+
+        for (const size in cartItems[productId]) {
+            const quantity = cartItems[productId][size];
+
+            if (quantity > 0) {
+                totalAmount += itemInfo.price * quantity;
+            }
+        }
+    }
+
+    return totalAmount;
+};
+
+
+            // value obeject function 
     const value = {
         products , currency, deliveryFee, taxRate,
         search, setSearch, showSearch, setShowSearch,
         cartItems, addToCart,
 
-        getCartCount, updateQuantity
+        getCartCount, updateQuantity,
+        getCartAmount
 
     }
     return (
