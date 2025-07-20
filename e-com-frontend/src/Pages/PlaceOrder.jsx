@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Title from '../Components/Title'
 import CartTotal from '../Components/CartTotal'
+import { ShopContext } from '../Context/ShopContext';
 
 
 
 
 const PlaceOrder = () => {
 const [method, setMethod] = useState('cod');
-
+const {navigate} =useContext(ShopContext);
 
   return (
     <div className='flex flex-col sm:flex-row justify-between gap-3 pt-5 sm:pt-14 min-h-[80vh border-t]'>
@@ -73,6 +74,10 @@ const [method, setMethod] = useState('cod');
                 <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'cod' ? 'bg-green-500' : ''}`}></p>
                 <p className='text-gray-500 text-sm font-medium mx-4 '>CASH ON DELIVERY</p>
               </div>
+            </div>
+
+            <div className='w-full text-end mt=8'>
+              <button onClick={() => navigate('/orders')} className='bg-black text-white px-15 py-3 mt-5 text-sm hover:bg-gray-900'>PLACE ORDER</button>
             </div>
             </div>
           </div>      
