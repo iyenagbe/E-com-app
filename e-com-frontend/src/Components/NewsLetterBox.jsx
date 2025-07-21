@@ -11,8 +11,7 @@ const onSubmitHandler = (event) => {
     <div className='text-center '>
       <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
       <p className='text-gray-400 mt-3'>
-        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. */}
+         Subscribe to our newsletter for early access to new arrivals, exclusive offers, and style tips you won't want to miss. No spam, just the good stuff.
       </p>
 
         <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3 pb-2 mt-3 bg-gray-400'>
