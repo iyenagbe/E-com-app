@@ -1,7 +1,8 @@
     import validator from "validator";
     import bcrypt from "bcrypt";
     import jwt from "jsonwebtoken";
-    import userModel from "../models/userModel.js";
+    import userModel from "../models/productModel.js";
+import { trusted } from "mongoose";
 
 
     const createToken = (id) => {
@@ -76,7 +77,20 @@
 
     // Route for admin login — you can build this similarly
     const adminLogin = async (req, res) => {
-      res.send("Admin login logic goes here");
-    };
+    try {
+        const { email, password } = req.body;
 
-    export { loginUser, registerUser, adminLogin };
+        if (email === process.env.ADMIN_EMAIL || password !== process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email, process.env.JWT_SECRET, { expiresIn: "3d" });
+            res.json({ success: true, token });
+        } else{
+          res.json({ success: false, message: "Invalid admin credentials" });
+        }
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
+export { loginUser, registerUser, adminLogin };
