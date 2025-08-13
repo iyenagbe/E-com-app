@@ -1,3 +1,51 @@
-backend/
+# =========================
+# Core Node & React ignores
+# =========================
+node_modules/
+build/
+dist/
+
+# =========================
+# Environment & config files
+# =========================
 .env
-node_modules
+.env.local
+.env.development
+.env.production
+.env.test
+
+# If you use dotenv in backend
+backend/.env
+backend/.env.*
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# =========================
+# IDE & editor settings
+# =========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# =========================
+# Cache & temp files
+# =========================
+.cache/
+.tmp/
+*.tmp
+*.swp
