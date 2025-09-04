@@ -20,15 +20,15 @@ const LatestCollection = () => {
       <div className='text-center py-8 text-3xl'>
         <Title text1={'LATEST'} text2={'COLLECTION'} />
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-        💥 Big Style, Bigger Savings! 💸
+            Big Style, Bigger Savings!
             Step into the sale's with fresh looks and unbeatable prices.
 
-            🛍️ Up to 10% OFF on our latest collection!
-            🎁 Free shipping on orders over ₦500,000 within Lagos Nigeria
-            🔥 Limited stock. Unlimited style.
+            Up to 10% OFF on our latest collection!
+            Free shipping on orders over ₦500,000 within Lagos Nigeria
+            Limited stock. Unlimited style.
 
             Shop now. Love forever.
-            👉 Explore Collection
+            Explore Collection
         </p>
       </div>
 

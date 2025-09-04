@@ -1,5 +1,5 @@
 import React from 'react'
-import { assets } from '../assets/assets'
+// import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
 
         <div>
-            <img src={assets.logo} className='mb-5 w-32' alt="" />
+            <img src="images/store_img.jpeg" className='mb-5 w-32' alt="" />
             <p className='text-gray-500 w-full sm:w-3/4 '>
                 Rayjock Store is your one-stop shop for the latest fashion trends and accessories. 
                 We offer a wide range of products to suit every style and budget, with a focus on 

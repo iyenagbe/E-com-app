@@ -24,9 +24,9 @@ const OurPolicy = () => {
             How to Request an Exchange
             Contact our support team via WhatsApp, Email, or through your account dashboard.
 
-            Once approved, ship the item back we’ll provide return instructions.
+            Once approved, ship the item back we'll provide return instructions.
 
-            We’ll send a replacement item or store credit after we receive and inspect the item.
+            We'll send a replacement item or store credit after we receive and inspect the item.
 
             Who Pays for Shipping?
             If the exchange is due to our error wrong item, damaged, etc., we cover shipping.

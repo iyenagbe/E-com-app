@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center py-5 font-medium'>
 
-        <Link to='/'><img src={assets.logo} className='w-36 cursor-pointer' alt="" /> </Link> 
+        <Link to='/'><img src="images/store_img.jpeg" className='w-36 cursor-pointer' alt="" /> </Link> 
 
         <ul className='hidden md:flex gap-5 text-sm text-gray-700'>
 
