@@ -3,7 +3,6 @@ import { ShopContext, } from '../Context/ShopContext';
 import Title from './Title';
 import ProductItem from './ProductItem';
 
-
 const LatestCollection = () => {
 
     const {products} = useContext(ShopContext);
@@ -14,7 +13,6 @@ const LatestCollection = () => {
 
     }, [])
     
-
   return (
     <div className='my-10'>
       <div className='text-center py-8 text-3xl'>
@@ -45,5 +43,4 @@ const LatestCollection = () => {
     </div>
   )
 }
-
 export default LatestCollection

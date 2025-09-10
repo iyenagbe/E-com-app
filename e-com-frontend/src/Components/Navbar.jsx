@@ -3,20 +3,17 @@ import {Link, NavLink } from 'react-router-dom'
 import {assets} from '../assets/assets'
 import { ShopContext } from '../Context/ShopContext';
 
-
-
-
 const Navbar = () => {
-
     const [visible, setVisible] = React.useState(false);
 
     const {setShowSearch, getCartCount} = useContext(ShopContext);
 
 
   return (
+
     <div className='flex justify-between items-center py-5 font-medium'>
 
-        <Link to='/'><img src="images/store_img.jpeg" className='w-36 cursor-pointer' alt="" /> </Link> 
+        <Link to='/'><img src="public/images/store_img.jpeg" className='w-36 cursor-pointer' alt="" /> </Link> 
 
         <ul className='hidden md:flex gap-5 text-sm text-gray-700'>
 
@@ -41,6 +38,7 @@ const Navbar = () => {
             </NavLink>
         </ul>
 
+
         <div className='flex items-center gap-5'>
             <img onClick={() => setShowSearch(true)} src={assets.search_icon}  className='w-5 cursor-pointer'  alt="" /> 
 
@@ -56,7 +54,7 @@ const Navbar = () => {
             </div>
 
             <Link to='/cart' className='relative'>
-                <img src={assets.cart_icon} className='w-5 min-w-5' alt="" />
+                <img src={assets.cart_icon} className='w-5 min-w-5' alt=""/>
                 <p className='absolute right-[-6px] bottom-[-6px] min-w-[16px] h-[16px] px-[4px] 
                 bg-black text-white rounded-full text-[10px] flex items-center justify-center leading-none'>
                 {getCartCount()}
